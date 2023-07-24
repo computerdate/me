@@ -1,0 +1,72 @@
+html {
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/candle1.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/candle1.gif"), auto;
+    overflow: hidden;
+  }
+  
+  body {
+        background-image: url('./Assets/brokenScreen.png');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        font-family: 'Epilogue', sans-serif;
+        font-kerning: auto;
+        font-size: 1.5vw;  
+        color: whitesmoke;
+        text-decoration: none;   
+        text-shadow: .3vw .3vw .3vw rgb(112, 112, 112);
+        position: fixed;
+        top:0%;
+        left: 5%;  
+        max-width: 60%;
+        padding: 0%;
+        }
+  
+  
+  .hover {
+    pointer-events: none;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  
+  a:link {
+    color:white;
+    text-decoration: none;
+    }
+    a:visited {
+    color:white;
+    text-decoration: none;
+    }
+    a:hover {
+    color:red;
+    text-decoration: none;
+    }
+
+    
+  @media screen and (max-width: 600px) {
+
+
+    html{
+      overflow: auto;
+   }
+
+
+   body {
+    height: 100%;
+    font-family: 'Epilogue', sans-serif;
+    font-kerning: auto;
+    font-size: 4vw;  
+    color: whitesmoke;
+    text-decoration: none;   
+    text-shadow: .3vw .3vw .3vw rgb(112, 112, 112);
+    position: fixed;
+    top:0%;
+    left: 5%;  
+    max-width: 80%;
+    padding: 0%;
+    }
+
+  }
