@@ -1,72 +1,230 @@
-html {
-    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/candle1.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/candle1.gif"), auto;
+body {
+    background-color: black;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Dia', helvetica, arial, sans-serif;
+    font-style: normal;
+    font-size: 1.5vw;  
+    color: white;
     overflow: hidden;
-  }
-  
-  body {
-        background-image: url('./Assets/brokenScreen.png');
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        font-family: 'Epilogue', sans-serif;
-        font-kerning: auto;
-        font-size: 1.5vw;  
-        color: whitesmoke;
-        text-decoration: none;   
-        text-shadow: .3vw .3vw .3vw rgb(112, 112, 112);
+         
+    }
+
+
+
+
+    .vimeo-wrapper {
         position: fixed;
-        top:0%;
-        left: 5%;  
-        max-width: 60%;
-        padding: 0%;
-        }
-  
-  
-  .hover {
-    pointer-events: none;
-    display: inline-block;
-    position: absolute;
+    
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    
+    .vimeo-wrapper iframe {
+        width: 100vw;
+        height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+        min-height: 100vh;
+        min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+      
+
+    
+
+.opencall {
+  float: right;
+  padding: 5px;
+  position: fixed;
+  bottom: 50%;
+  right: -7%;
+  font-size: 1.5vw;
+  z-index: 100;
+  transform: rotate(0.25turn);
+  position: center center;
+/*  animation-name: spin3D;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+/*animation-timing-function: linear;*/
+}  
+
+
+
+@keyframes spin3D {
+  from { transform: rotateY(0deg) }
+  to { transform: rotateY(360deg) }
+}
+
+.nowshowing {
+  float: auto;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+  position: center center;
+  animation-name: spin3D;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function: linear;
+  filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+}  
+
+.responsive{
+  max-width:1000%;
+  max-height:1000%;
+}
+
+.center{
+ position: absolute;
+ top: 50%;
+ left: 50%; 
+ transform: scale(0.5) translate(-100%, 270%);
+}
+
+
+
+    
+    
+
+
+      
+#myVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+.hover {
+pointer-events: none;
+display: inline-block;
+position: absolute;
+}
+
+a:link {
+color:white;
+text-decoration: none;
+}
+a:visited {
+color:white;
+text-decoration: none;
+}
+a:hover {
+color:white;
+text-decoration: none;
+}
+
+
+/*banner open call*/
+.marquee a:link {
+  color:white;
+  text-decoration: none;
+  background-color: none;
   }
+  .marquee a:visited {
+  color:white;
+  text-decoration: none;
+  background-color: none;
+  }
+  .marquee a:hover {
+  text-decoration: underline;
+  color: #ff0000;
+  background-color: none;
+  /*font-family: 'Playfair Display', serif;*/
+  text-shadow: 0 0 20px #ff0000;
+  }
+       
+
+            
+.marquee {
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 3%;
+  left: 0%;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  background-color: black;
+  font-family: 'Dia', helvetica, arial, sans-serif;
+}
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 30px;
+  content: "";
+  z-index: 1;
+}
+/*
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #ccc 10%, transparent 80%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #ccc 10%, transparent 80%);
+}
+*/
+.marquee__content {
+  width: 300%;
+  display: flex;
+  line-height: 20px;
+  animation: marquee 40s linear infinite forwards;
   
+}
+.marquee__content:hover {
+  animation-play-state: paused;
+}
+.list-inline {
+  display: flex;
+  justify-content: space-around;
+  width: 33.33%;
+  /* reset list */
+  list-style: none;
+  padding: 0;
   
-  a:link {
-    color:white;
-    text-decoration: none;
-    }
-    a:visited {
-    color:white;
-    text-decoration: none;
-    }
-    a:hover {
-    color:red;
-    text-decoration: none;
+  margin: 0;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+  html{
+    background-image: url('./assets/vrn_movil.png');
     }
 
     
-  @media screen and (max-width: 600px) {
-
-
-    html{
-      overflow: auto;
-   }
-
-
-   body {
-    height: 100%;
-    font-family: 'Epilogue', sans-serif;
-    font-kerning: auto;
-    font-size: 4vw;  
-    color: whitesmoke;
-    text-decoration: none;   
-    text-shadow: .3vw .3vw .3vw rgb(112, 112, 112);
-    position: fixed;
-    top:0%;
-    left: 5%;  
-    max-width: 80%;
-    padding: 0%;
-    }
-
   }
