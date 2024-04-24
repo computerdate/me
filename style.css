@@ -218,13 +218,3 @@ text-decoration: none;
 }
 
 
-
-@media screen and (max-width: 600px) {
-
-
-  html{
-    background-image: url('./assets/vrn_movil.png');
-    }
-
-    
-  }
