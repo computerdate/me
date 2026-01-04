@@ -1,220 +1,144 @@
+html {
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/leaf.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/leaf.gif"), auto;
+}
+
+@font-face {
+    font-family: 'Dia';
+    src: url('DiaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+a {
+    background-color: transparent;
+    color: #00ff00;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:active {
+    color: #0000ff;
+}
+
+
 body {
-    background-color: black;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     height: 100%;
+    display: block;
+    margin: 0 auto;
     font-family: 'Dia', helvetica, arial, sans-serif;
     font-style: normal;
-    font-size: 1.5vw;  
-    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.0125rem;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+}
+
+
+
+.dropbtn:hover {
+    box-shadow: 20px 12px 16px 0 rgba(255,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.dropbtn {
+    border-radius: 50%;
+    outline: none;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+    display: block;
+    width: 3we;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+
+  .dropdown {
+    position: fixed;
+    display: inline-block;
+    z-index: 10;
+    top: 1vw;
+    left: 0;
+    text-align: justify;
+    padding: 60px 20px 10px 10px;
+    /* padding de la caja (margen interior)  en este caso 40px es el padding superior y el resto (derecha, abajo, izquierda)*/
+    height: 360px;
+    /* alto de la caja */
+    width: 400px;
+    /* ancho de la caja */
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 1em;
+    border: 1px solid #00ff00;
+    transition: all 0.5s ease;
+    background-color: #fff;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  
+  
+  .show {display:block;}
+
+
+
+
+
+
+}
+.vimeo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
     overflow: hidden;
-         
-    }
-
-
-
-
-    .vimeo-wrapper {
-        position: fixed;
     
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        pointer-events: none;
-        overflow: hidden;
-    }
-    
-    .vimeo-wrapper iframe {
-        width: 100vw;
-        height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-        min-height: 100vh;
-        min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-      
+}
+.vimeo-wrapper iframe {
 
     
-
-.opencall {
-  float: right;
-  padding: 5px;
-  position: fixed;
-  bottom: 50%;
-  right: -7%;
-  font-size: 1.5vw;
-  z-index: 100;
-  transform: rotate(0.25turn);
-  position: center center;
-/*  animation-name: spin3D;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    /* linear | ease | ease-in | ease-out | ease-in-out */
-/*animation-timing-function: linear;*/
-}  
-
-
-
-@keyframes spin3D {
-  from { transform: rotateY(0deg) }
-  to { transform: rotateY(360deg) }
-}
-
-.nowshowing {
-  float: auto;
-  padding: 5px;
-  position: relative;
-  z-index: 100;
-  position: center center;
-  animation-name: spin3D;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-    /* linear | ease | ease-in | ease-out | ease-in-out */
-  animation-timing-function: linear;
-  filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
-}  
-
-.responsive{
-  max-width:1000%;
-  max-height:1000%;
-}
-
-.center{
- position: absolute;
- top: 50%;
- left: 50%; 
- transform: scale(0.5) translate(-100%, 270%);
-}
-
-
-
+    width: 52.5vw;
+    height: 29.6vw;
+    /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
     
+    min-height: 30vh;
+    min-width: 14.0625vh;
+    /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
     
-
-
-      
-#myVideo {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+    inset 0 0 50px #fff,      /* inner white */
+    inset 20px 0 80px rgb(186, 250, 215),   /* inner left magenta short */
+    inset -20px 0 80px rgb(165, 252, 252),  /* inner right cyan short */
+    inset 20px 0 300px rgb(0, 255, 115),  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff;         /* outer right cyan */
 }
-
-
-
-
-
-.hover {
-pointer-events: none;
-display: inline-block;
-position: absolute;
-}
-
-a:link {
-color:white;
-text-decoration: none;
-}
-a:visited {
-color:white;
-text-decoration: none;
-}
-a:hover {
-color:white;
-text-decoration: none;
-}
-
-
-/*banner open call*/
-.marquee a:link {
-  color:white;
-  text-decoration: none;
-  background-color: none;
-  }
-  .marquee a:visited {
-  color:white;
-  text-decoration: none;
-  background-color: none;
-  }
-  .marquee a:hover {
-  text-decoration: underline;
-  color: #ff0000;
-  background-color: none;
-  /*font-family: 'Playfair Display', serif;*/
-  text-shadow: 0 0 20px #ff0000;
-  }
-       
-
-            
-.marquee {
-  margin: 0 auto;
-  width: 100%;
-  height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: fixed;
-  bottom: 3%;
-  left: 0%;
-  padding-top: 6px;
-  padding-bottom: 3px;
-  background-color: black;
-  font-family: 'Dia', helvetica, arial, sans-serif;
-}
-.marquee:before,
-.marquee:after {
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 30px;
-  content: "";
-  z-index: 1;
-}
-/*
-.marquee:before {
-  left: 0;
-  background: linear-gradient(to right, #ccc 10%, transparent 80%);
-}
-.marquee:after {
-  right: 0;
-  background: linear-gradient(to left, #ccc 10%, transparent 80%);
-}
-*/
-.marquee__content {
-  width: 300%;
-  display: flex;
-  line-height: 20px;
-  animation: marquee 40s linear infinite forwards;
-  
-}
-.marquee__content:hover {
-  animation-play-state: paused;
-}
-.list-inline {
-  display: flex;
-  justify-content: space-around;
-  width: 33.33%;
-  /* reset list */
-  list-style: none;
-  padding: 0;
-  
-  margin: 0;
-}
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-66.6%);
-  }
-}
-
-
